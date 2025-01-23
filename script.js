@@ -8,7 +8,6 @@ const unitElement = document.getElementById("unit");
 const weatherCondition = document.getElementById("weather-condition");
 const humidityElement = document.getElementById("humidity");
 const uvIndexElement = document.getElementById("uv-index");
-const forecastContainer = document.getElementById("forecast-container");
 const toggleUnitButton = document.getElementById("toggle-unit");
 
 let isCelsius = true;
@@ -39,14 +38,27 @@ searchButton.addEventListener("click", () => {
 // Fetch weather data by coordinates
 function fetchWeatherByCoords(lat, lon) {
   fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`)
-    .then((response) => response.json())
-    .then((data) => updateWeatherUI(data));
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Failed to fetch weather data.");
+      }
+      return response.json();
+    })
+    .then((data) => updateWeatherUI(data))
+    .catch(() => {
+      notification.textContent = "Unable to fetch weather data.";
+    });
 }
 
 // Fetch and update weather data
 function fetchWeatherData(city) {
   fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`)
-    .then((response) => response.json())
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("City not found.");
+      }
+      return response.json();
+    })
     .then((data) => updateWeatherUI(data))
     .catch(() => {
       notification.textContent = "City not found. Please try again.";
@@ -54,27 +66,17 @@ function fetchWeatherData(city) {
 }
 
 function updateWeatherUI(data) {
-  const { name, main, weather, coord } = data;
+  const { name, main, weather } = data;
 
   // Update current weather
+  document.getElementById("city-name").textContent = name;
   tempElement.textContent = Math.round(main.temp);
   weatherCondition.textContent = weather[0].description;
-  weatherImg.src = `http://openweathermap.org/img/wn/${weather[0].icon}.png`;
+  weatherImg.src = `http://openweathermap.org/img/wn/${weather[0].icon}@2x.png`;
   humidityElement.textContent = `Humidity: ${main.humidity}%`;
-
-  // Fetch UV Index data
-  fetchUVIndex(coord.lat, coord.lon);
 
   // Change background based on humidity
   updateBackground(main.humidity);
-}
-
-function fetchUVIndex(lat, lon) {
-  fetch(`https://api.openweathermap.org/data/2.5/uvi?lat=${lat}&lon=${lon}&appid=${apiKey}`)
-    .then((response) => response.json())
-    .then((data) => {
-      uvIndexElement.textContent = `UV Index: ${data.value}`;
-    });
 }
 
 // Toggle temperature unit
