@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <!-- Link to the CSS file -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="weather-app">
+    <!-- Search Bar -->
+    <div class="search-bar">
+      <input
+        type="text"
+        id="city-input"
+        placeholder="Enter city name..."
+        aria-label="Search city"
+      />
+      <button id="search-btn">Search</button>
+    </div>
+
+    <!-- Current Weather Section -->
+    <div class="current-weather">
+      <!-- City Name, Day, and Date -->
+      <h2 id="city-name">City Name</h2>
+      <p id="current-day">Wednesday, January 22, 2025</p>
+
+      <!-- Weather Info -->
+      <div class="temp-image">
+        <img id="weather-img" src="default-image.jpg" alt="Weather condition" />
+      </div>
+      <h1 class="temperature">
+        <span id="temp">25</span>°<span id="unit">C</span>
+      </h1>
+      <p id="weather-condition">Sunny</p>
+      <p id="humidity">Humidity: 60%</p>
+      <p id="uv-index">UV Index: 4</p>
+      <button id="toggle-unit">Switch to °F</button>
+    </div>
+
+    <!-- 3-Day Forecast -->
+    <div class="forecast-section">
+      <h2>3-Day Forecast</h2>
+      <div class="forecast">
+        <div class="day">
+          <p class="day-name">Thursday</p>
+          <p class="forecast-date">January 23, 2025</p>
+          <img src="default-image.jpg" alt="Weather Icon" />
+          <p class="day-temp">25°/18°</p>
+        </div>
+        <div class="day">
+          <p class="day-name">Friday</p>
+          <p class="forecast-date">January 24, 2025</p>
+          <img src="default-image.jpg" alt="Weather Icon" />
+          <p class="day-temp">26°/19°</p>
+        </div>
+        <div class="day">
+          <p class="day-name">Saturday</p>
+          <p class="forecast-date">January 25, 2025</p>
+          <img src="default-image.jpg" alt="Weather Icon" />
+          <p class="day-temp">28°/20°</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Link to the JavaScript file -->
+  <script src="script.js"></script>
+</body>
+</html>
+
