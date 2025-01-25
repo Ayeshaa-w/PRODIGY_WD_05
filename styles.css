@@ -1,0 +1,202 @@
+/* General Styles */
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+* {
+  font-family: "Rubik", sans-serif;
+  --font-color-main: #332464;
+}
+
+body {
+  background: linear-gradient(to bottom, #e0eefa, #b2d1e9);
+  color: var(--font-color-main);
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  transition: background 1s ease;
+}
+
+/* Weather App Container */
+.weather-app {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  width: 70%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.search-bar input:focus {
+  box-shadow: 0 0 8px rgba(66, 133, 244, 0.7);
+}
+
+.search-bar button, #reset-location {
+  padding: 10px 20px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #332464;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.search-bar button:hover, #reset-location:hover {
+  background-color:  #e6d1f0;
+  color:  #332464;
+  transform: scale(1.05);
+}
+
+/* Notification */
+.notification {
+  margin: 10px 0;
+  color: #ff5252;
+  font-size: 14px;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+}
+
+.notification.show {
+  opacity: 1;
+}
+
+/* Current Weather Section */
+.current-weather img {
+  width: 100px;
+  margin-bottom: 10px;
+  animation: bounceIn 1s ease-in-out;
+}
+
+.temperature {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.current-weather p {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+#toggle-unit {
+  margin-top: 10px;
+  padding: 8px 16px;
+  font-size: 14px;
+  background-color: #332464;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#toggle-unit:hover {
+  background-color:  #8f6aa1;
+}
+
+/* Forecast Section */
+.forecast-section h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: var(--font-color-main);
+}
+
+.forecast {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.forecast .day {
+  background: #f3f4f6;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 70px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.krish{
+  background: #e6d1f0;
+  border-radius: 25px;
+  padding: 15px;
+  
+}
+
+.forecast .day:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.forecast .day img {
+  width: 50px;
+}
+
+.forecast .day p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 500px) {
+  .weather-app {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  .forecast .day {
+    width: 60px;
+  }
+
+  .forecast {
+    justify-content: center;
+  }
+
+  .temperature {
+    font-size: 36px;
+  }
+  
+}
