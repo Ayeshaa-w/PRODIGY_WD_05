@@ -52,13 +52,9 @@ The Weather App provides real-time weather updates based on the user's current l
 ### **Getting Started**  
 To get a local copy up and running, follow these simple steps.  
 
----
-
 ## **Prerequisites**  
 - A modern web browser.  
 - An API key from OpenWeatherMap API.  
-
----
 
 ## **Installation**  
 
