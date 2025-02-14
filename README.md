@@ -60,7 +60,7 @@ To get a local copy up and running, follow these simple steps.
 
 ### **Clone the repository:**  
 ```bash
-git clone <your-repo-link>
+git clone <https://github.com/Ayeshaa-w/PRODIGY_WD_05.git>
 ```
 ### **Navigate to the project directory:**  
 ```bash
