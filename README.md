@@ -49,7 +49,7 @@ The Weather App provides real-time weather updates based on the user's current l
 - **Geolocation API** (User Location Detection)  
 
 ---
-### **Getting Started**  
+## **Getting Started**  
 To get a local copy up and running, follow these simple steps.  
 
 ## **Prerequisites**  
