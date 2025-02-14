@@ -64,7 +64,7 @@ git clone https://github.com/Ayeshaa-w/weather-app.git
 ```
 ### **Navigate to the project directory:**  
 ```bash
-cd 
+cd https://ayeshaa-w.github.io/weather-app/
 ```
 ### **Update API Key in JavaScript files:**  
 Replace the placeholder with your API key in all relevant `.js` files:  
