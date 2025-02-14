@@ -1,4 +1,4 @@
-# ### 🌤 **Weather App - Features & Description** 🌤  
+# 🌤 **Weather App - Features & Description** 🌤  
 
 #### **📌 Overview**  
 The Weather App provides real-time weather updates based on the user's current location or any searched city. It displays temperature, humidity, weather conditions, and a five-day forecast with a dynamic, aesthetic UI.  
