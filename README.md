@@ -54,5 +54,3 @@ The Weather App provides real-time weather updates based on the user's current l
 - Checking weather conditions before traveling.  
 - Planning outdoor activities based on weather forecasts.  
 - Understanding temperature variations over the next few days.  
-
-Would you like any refinements or additional features?
