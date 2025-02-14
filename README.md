@@ -60,11 +60,11 @@ To get a local copy up and running, follow these simple steps.
 
 ### **Clone the repository:**  
 ```bash
-git clone <https://github.com/Ayeshaa-w/PRODIGY_WD_05.git>
+git clone https://github.com/Ayeshaa-w/weather-app.git
 ```
 ### **Navigate to the project directory:**  
 ```bash
-cd <your-project-directory>
+cd 
 ```
 ### **Update API Key in JavaScript files:**  
 Replace the placeholder with your API key in all relevant `.js` files:  
