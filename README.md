@@ -49,8 +49,46 @@ The Weather App provides real-time weather updates based on the user's current l
 - **Geolocation API** (User Location Detection)  
 
 ---
+### **Getting Started**  
+To get a local copy up and running, follow these simple steps.  
 
-## **Use Cases**  
-- Checking weather conditions before traveling.  
-- Planning outdoor activities based on weather forecasts.  
-- Understanding temperature variations over the next few days.  
+---
+
+## **Prerequisites**  
+- A modern web browser.  
+- An API key from OpenWeatherMap API.  
+
+---
+
+## **Installation**  
+
+### **Clone the repository:**  
+```bash
+git clone <your-repo-link>
+```
+### **Navigate to the project directory:**  
+```bash
+cd <your-project-directory>
+```
+### **Update API Key in JavaScript files:**  
+Replace the placeholder with your API key in all relevant `.js` files:  
+```js
+let apiKey = "Your API Key";
+```
+### **Run the project:**  
+Open `index.html` in your browser to view the project.  
+
+---
+
+## **Usage**  
+- The app will detect your **current location** and display real-time weather updates automatically.  
+- To search for a different location, enter the **city name** in the search bar and press **Enter**.  
+- View details such as **temperature, humidity, wind speed, and a 5-day forecast**.  
+- Toggle between **Celsius (°C) and Fahrenheit (°F)** for temperature conversion.  
+- Use the **Reset Location** button to revert to your current location’s weather.  
+
+---
+
+## **Note**  
+- For the **best experience**, view this website on a **400×860** screen resolution.  
+
